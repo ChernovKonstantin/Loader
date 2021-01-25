@@ -50,6 +50,8 @@ class ViewController: UIViewController {
         downButton.layer.cornerRadius = 35.0
         rightButton.layer.cornerRadius = 35.0
         upButton.layer.cornerRadius = 35.0
+        
+        
     }
     
     func updateView(){
@@ -113,22 +115,15 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource, 
     }
 }
 
-extension ViewController: InputDataUpdate{
-    func updateInfo(roomSize: String, personX: String, personY: String, boxX: String, boxY: String, winX: String, winY: String) {
-        if let integer = Int(roomSize), integer >= 6, integer <= 10 {
-            person.room.width = integer }
-        if let integer = Int(personX), integer >= 0, integer <= person.room.width-1{
-            person.position.x = integer }
-        if let integer = Int(personY), integer >= 0, integer <= person.room.width-1{
-            person.position.y = integer}
-        if let integer = Int(boxX), integer >= 1, integer <= person.room.width-2{
-            person.box.position.x = integer}
-        if let integer = Int(boxY), integer >= 1, integer <= person.room.width-2{
-            person.box.position.y = integer}
-        if let integer = Int(winX), integer >= 1, integer <= person.room.width-2{
-            person.box.pointToWin.x = integer}
-        if let integer = Int(winY), integer >= 1, integer <= person.room.width-2{
-            person.box.pointToWin.y = integer}
+extension ViewController: InputDataUpdate{    
+    func updateInfo(roomSize: Int, personX: Int, personY: Int, boxX: Int, boxY: Int, winX: Int, winY: Int) {
+            person.room.width = roomSize
+            person.position.x = personX
+            person.position.y = personY
+            person.box.position.x = boxX
+            person.box.position.y = boxY
+            person.box.pointToWin.x = winX
+            person.box.pointToWin.y = winY
         
         collectionView.reloadData()
     }

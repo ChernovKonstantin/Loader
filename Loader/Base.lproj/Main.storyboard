@@ -276,7 +276,7 @@
                         <outlet property="boxY" destination="PY6-1U-R6b" id="R5B-pb-QlY"/>
                         <outlet property="personX" destination="xEJ-Ql-rlz" id="6IG-01-4JC"/>
                         <outlet property="personY" destination="qO6-ol-dzL" id="Zgn-xQ-uhq"/>
-                        <outlet property="roomWIdth" destination="odM-Ns-wOF" id="gqa-ut-ddM"/>
+                        <outlet property="roomSize" destination="odM-Ns-wOF" id="gqa-ut-ddM"/>
                         <outlet property="winX" destination="piR-km-DhV" id="IpH-PH-EEl"/>
                         <outlet property="winY" destination="3ty-zv-q5q" id="Tab-um-QsH"/>
                     </connections>
