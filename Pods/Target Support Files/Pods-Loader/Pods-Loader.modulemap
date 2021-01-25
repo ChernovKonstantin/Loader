@@ -1,0 +1,6 @@
+framework module Pods_Loader {
+  umbrella header "Pods-Loader-umbrella.h"
+
+  export *
+  module * { export * }
+}
