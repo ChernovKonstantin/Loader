@@ -10,27 +10,14 @@ import Foundation
 class Object{
     var scores = 0
     var name: String
-    var maxV: Int
     var position: Point
-//    {
-//        didSet{
-//            if position.x == 0 || position.y == 0 || position.x == maxV || position.y == maxV{
-//                scores -= 1
-//                resetBoxPosition()
-//            }
-//            if position.x == pointToWin.x && position.y == pointToWin.y{
-//                scores += 1
-//                resetWinPosition()
-//            }
-//        }
-//    }
-    init(name: String, position: Point, pointToWin: Point, maxV: Int) {
+    var pointToWin: Point
+
+    init(name: String, position: Point, pointToWin: Point) {
         self.name = name
         self.position = position
         self.pointToWin = pointToWin
-        self.maxV = maxV
     }
-    var pointToWin: Point
     
     func moveTo(direction: Direction, in room: Room) -> Bool{
         let startPoint = (x: 0, y: 0)
@@ -44,19 +31,6 @@ class Object{
             return true
         }
         return false
-    }
-    
-    
-    func resetWinPosition() {
-        self.pointToWin = Point(x: Int.random(in: 1...maxV-1), y: Int.random(in: 1...maxV-1))
-    }
-    
-    func resetBoxPosition() {
-        let newPosition = Point(x: Int.random(in: 1...maxV-1), y: Int.random(in: 1...maxV-1))
-        if (newPosition.x != self.pointToWin.x) && (newPosition.y != self.pointToWin.y){
-            self.position = newPosition
-        }else{
-            resetBoxPosition()}
     }
 }
 

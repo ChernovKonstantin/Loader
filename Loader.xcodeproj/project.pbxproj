@@ -19,6 +19,7 @@
 		1764727D259620BF00A1134F /* Room.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1764727C259620BF00A1134F /* Room.swift */; };
 		17647280259620F500A1134F /* Point.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1764727F259620F500A1134F /* Point.swift */; };
 		176472832596210800A1134F /* DIrection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 176472822596210800A1134F /* DIrection.swift */; };
+		17DB711425C306E600B9DA5C /* InputError+HUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17DB711325C306E600B9DA5C /* InputError+HUD.swift */; };
 		17DF1B3325BDBC0800BF1A64 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17DF1B3225BDBC0700BF1A64 /* UIViewController+Extension.swift */; };
 		17DF1B3F25BDC74300BF1A64 /* CustomCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17DF1B3E25BDC74300BF1A64 /* CustomCollectionViewCell.swift */; };
 		6E3450928405195D246E06AB /* Pods_Loader.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA7D933D09C0849556D6085B /* Pods_Loader.framework */; };
@@ -39,6 +40,7 @@
 		1764727C259620BF00A1134F /* Room.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Room.swift; sourceTree = "<group>"; };
 		1764727F259620F500A1134F /* Point.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Point.swift; sourceTree = "<group>"; };
 		176472822596210800A1134F /* DIrection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DIrection.swift; sourceTree = "<group>"; };
+		17DB711325C306E600B9DA5C /* InputError+HUD.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "InputError+HUD.swift"; sourceTree = "<group>"; };
 		17DF1B3225BDBC0700BF1A64 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
 		17DF1B3E25BDC74300BF1A64 /* CustomCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCollectionViewCell.swift; sourceTree = "<group>"; };
 		2611672BA73DF728251A51F0 /* Pods-Loader.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Loader.release.xcconfig"; path = "Target Support Files/Pods-Loader/Pods-Loader.release.xcconfig"; sourceTree = "<group>"; };
@@ -90,6 +92,7 @@
 				1764727C259620BF00A1134F /* Room.swift */,
 				1764727F259620F500A1134F /* Point.swift */,
 				17DF1B3225BDBC0700BF1A64 /* UIViewController+Extension.swift */,
+				17DB711325C306E600B9DA5C /* InputError+HUD.swift */,
 				1764726425961E4A00A1134F /* Main.storyboard */,
 				1764726725961E4C00A1134F /* Assets.xcassets */,
 				1764726925961E4C00A1134F /* LaunchScreen.storyboard */,
@@ -238,6 +241,7 @@
 				1764725F25961E4A00A1134F /* AppDelegate.swift in Sources */,
 				176472832596210800A1134F /* DIrection.swift in Sources */,
 				17DF1B3325BDBC0800BF1A64 /* UIViewController+Extension.swift in Sources */,
+				17DB711425C306E600B9DA5C /* InputError+HUD.swift in Sources */,
 				1764726125961E4A00A1134F /* SceneDelegate.swift in Sources */,
 				17DF1B3F25BDC74300BF1A64 /* CustomCollectionViewCell.swift in Sources */,
 			);

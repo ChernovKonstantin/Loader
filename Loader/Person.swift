@@ -13,7 +13,7 @@ class Person {
         self.name = "🤠"
         self.position = Point(x: 0, y: 0)
         self.room = Room(width: 10)
-        self.box = Object(name: "👹", position: Point(x: 1, y: 1), pointToWin: Point(x: 2, y: 2), maxV: room.width-1)
+        self.box = Object(name: "👹", position: Point(x: 1, y: 1), pointToWin: Point(x: 2, y: 2))
 
     }
     
@@ -65,9 +65,10 @@ class Person {
     }
     
     func newGame(){
+        print(room.width)
         let newPosition = Point(x: Int.random(in: 0...room.width-1), y: Int.random(in: 0...room.width-1))
-        box.resetWinPosition()
-        box.resetBoxPosition()
+        resetWinPosition()
+        resetBoxPosition()
         if newPosition.x != box.position.x && newPosition.y != box.position.y,
             newPosition.x != box.pointToWin.x && newPosition.y != box.pointToWin.y{
             self.position = newPosition
@@ -76,5 +77,17 @@ class Person {
         else{
             newGame()
         }
+    }
+    
+    func resetWinPosition() {
+        box.pointToWin = Point(x: Int.random(in: 1...room.width-2), y: Int.random(in: 1...room.width-2))
+    }
+
+    func resetBoxPosition() {
+        let newPosition = Point(x: Int.random(in: 1...room.width-2), y: Int.random(in: 1...room.width-2))
+        if (newPosition.x != box.pointToWin.x) && (newPosition.y != box.pointToWin.y){
+            box.position = newPosition
+        }else{
+            resetBoxPosition()}
     }
 }

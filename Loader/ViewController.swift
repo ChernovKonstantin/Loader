@@ -58,22 +58,22 @@ class ViewController: UIViewController {
         
         if person.position.x == person.box.pointToWin.x, person.position.y == person.box.pointToWin.y{
             person.box.scores -= 1
-            HUD.flash(.labeledError(title: "You died", subtitle: nil), delay: 1.5)
-            person.newGame()
+            HUD.flash(.labeledError(title: "You died", subtitle: "New game"), delay: 1.5)
+            person.newGame() 
         }
         
         if person.box.position.x == 0 || person.box.position.y == 0 || person.box.position.x == person.room.width-1 || person.box.position.y == person.room.width-1{
             person.box.scores -= 1
             HUD.flash(.labeledError(title: "You lost 1 score", subtitle: nil), delay: 1.5)
-            person.box.resetBoxPosition()
-            person.box.resetWinPosition()
+            person.resetBoxPosition()
+            person.resetWinPosition()
             
         }
         if person.box.position.x == person.box.pointToWin.x && person.box.position.y == person.box.pointToWin.y{
             person.box.scores += 1
             HUD.flash(.labeledSuccess(title: "You get 1 score", subtitle: nil), delay: 1.5)
-            person.box.resetBoxPosition()
-            person.box.resetWinPosition()
+            person.resetBoxPosition()
+            person.resetWinPosition()
         }
         
         scores.text = String("Scores: \(person.box.scores)")
